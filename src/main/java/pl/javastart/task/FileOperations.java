@@ -29,8 +29,7 @@ public class FileOperations {
         ) {
             while (!vehicles.isEmpty()) {
                 Vehicle vehicle = vehicles.poll();
-                bufferedWriter.write(vehicle.getType() + ";" + vehicle.getBrand() + ";" + vehicle.getModel() + ";"
-                        + vehicle.getProdYear() + ";" + vehicle.getMileage() + ";" + vehicle.getVin());
+                bufferedWriter.write(vehicle.toCsv());
                 bufferedWriter.newLine();
             }
         } catch (IOException e) {

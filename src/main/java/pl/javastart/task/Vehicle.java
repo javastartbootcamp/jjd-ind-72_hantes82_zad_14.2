@@ -53,4 +53,9 @@ public class Vehicle {
                 ", vin='" + vin + '\'' +
                 '}';
     }
+
+    public String toCsv() {
+        return type + ";" + brand + ";" + model + ";"
+                + prodYear + ";" + mileage + ";" + vin;
+    }
 }
